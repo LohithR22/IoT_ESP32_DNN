@@ -43,13 +43,16 @@ Model: "OccupancyNinja"
 # Layer (type) Output Shape Param \#
 
 dense_20 (Dense) (None, 128) 768 ➡️ Feature Extraction
+
 dropout_16 (Dropout) (None, 128) 0 ➡️ Combat Overfitting
+
 dense_21 (Dense) (None, 64) 8256 ➡️ Pattern Recognition
+
 dense_22 (Dense) (None, 32) 2080 ➡️ Decision Making
+
 dense_23 (Dense) (None, 1) 17 ➡️ Binary Output
 
-```
-**Trained to perfection**: 20 epochs of sensor data from 20,560 real-world scenarios [1][6]
+**Trained to perfection**: 20 epochs of sensor data from 20,560 real-world scenarios
 
 ---
 
@@ -60,13 +63,18 @@ dense_23 (Dense) (None, 1) 17 ➡️ Binary Output
 # Model Slimming Process
 
 tflite_convert --keras_model_file occupancy.h5 \\
+
 \--output_file occupancy.tflite \\
+
 \--optimize=size \\
+
 \--experimental_new_converter
 
 ````
 **Results**:
+
 📉 92% model size reduction (23MB → 1.8MB)
+
 ⚡ 3ms inference time on ESP32
 
 ---
@@ -168,9 +176,9 @@ This project proves that **AI belongs on microcontrollers**. By eliminating clou
 
 ## 📚 Learning Resources
 
-1. [TensorFlow Lite for Microcontrollers Guide](https://www.tensorflow.org/lite/microcontrollers) \[7]
-2. [ESP32 Memory Optimization Tricks](#) \[8]
-3. [Sensor Fusion Techniques](https://arxiv.org/abs/2105.00000) \[9]
+1. [TensorFlow Lite for Microcontrollers Guide](https://www.tensorflow.org/lite/microcontrollers) 
+2. [ESP32 Memory Optimization Tricks](#) 
+3. [Sensor Fusion Techniques](https://arxiv.org/abs/2105.00000) 
 
 ---
 
